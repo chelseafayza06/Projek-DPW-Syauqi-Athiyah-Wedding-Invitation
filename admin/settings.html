@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invitation Settings | Syauqi & Athiyah</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Invitation Settings ♡
+            </h1>
+
+            <p class="subtitle">
+                Atur musik, tampilan, dan fitur undangan
+                Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <form id="settingsForm">
+
+            <!-- MUSIC SETTINGS -->
+            <div class="box settings-box">
+
+                <div class="management-form-heading">
+
+                    <div class="management-icon icon-gold">
+                        ♬
+                    </div>
+
+                    <div>
+                        <p class="section-eyebrow">AUDIO EXPERIENCE</p>
+
+                        <h2 class="title is-4">
+                            Pengaturan Musik
+                        </h2>
+
+                        <p class="form-description">
+                            Atur musik yang akan menemani halaman undangan.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="field">
+                    <label class="label" for="musicUrl">
+                        URL Musik
+                    </label>
+
+                    <input
+                        type="text"
+                        class="input"
+                        id="musicUrl"
+                        placeholder="Contoh: assets/audio/wedding-song.mp3">
+                </div>
+
+
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Autoplay Musik</strong>
+
+                        <p>
+                            Izinkan musik diputar secara otomatis
+                            setelah tamu membuka undangan.
+                        </p>
+                    </div>
+
+                    <label class="switch-control">
+                        <input
+                            type="checkbox"
+                            id="musicAutoplay">
+
+                        <span class="switch-slider"></span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISPLAY SETTINGS -->
+            <div class="box settings-box">
+
+                <div class="management-form-heading">
+
+                    <div class="management-icon icon-rose">
+                        ♡
+                    </div>
+
+                    <div>
+                        <p class="section-eyebrow">DISPLAY CONTROL</p>
+
+                        <h2 class="title is-4">
+                            Pengaturan Tampilan
+                        </h2>
+
+                        <p class="form-description">
+                            Pilih bagian yang ingin ditampilkan
+                            pada halaman undangan.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- COUNTDOWN -->
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Countdown</strong>
+
+                        <p>
+                            Menampilkan hitung mundur menuju hari pernikahan.
+                        </p>
+                    </div>
+
+                    <label class="switch-control">
+                        <input
+                            type="checkbox"
+                            id="showCountdown">
+
+                        <span class="switch-slider"></span>
+                    </label>
+
+                </div>
+
+
+                <!-- RSVP -->
+                <div class="setting-option">
+
+                    <div>
+                        <strong>RSVP & Wishes</strong>
+
+                        <p>
+                            Menampilkan konfirmasi kehadiran
+                            dan kolom ucapan tamu.
+                        </p>
+                    </div>
+
+                    <label class="switch-control">
+                        <input
+                            type="checkbox"
+                            id="showRSVP">
+
+                        <span class="switch-slider"></span>
+                    </label>
+
+                </div>
+
+
+                <!-- GIFT -->
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Wedding Gift</strong>
+
+                        <p>
+                            Menampilkan informasi rekening
+                            dan hadiah pernikahan.
+                        </p>
+                    </div>
+
+                    <label class="switch-control">
+                        <input
+                            type="checkbox"
+                            id="showGift">
+
+                        <span class="switch-slider"></span>
+                    </label>
+
+                </div>
+
+
+                <!-- GALLERY -->
+                <div class="setting-option">
+
+                    <div>
+                        <strong>Gallery</strong>
+
+                        <p>
+                            Menampilkan kumpulan foto kenangan
+                            Syauqi & Athiyah.
+                        </p>
+                    </div>
+
+                    <label class="switch-control">
+                        <input
+                            type="checkbox"
+                            id="showGallery">
+
+                        <span class="switch-slider"></span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAVE BUTTON -->
+            <div class="settings-save-area">
+
+                <button
+                    type="submit"
+                    class="button settings-save-button">
+
+                    ♡ Simpan Pengaturan
+
+                </button>
+
+                <p>
+                    Perubahan pengaturan akan disimpan
+                    ke dalam database.
+                </p>
+
+            </div>
+
+
+            <!-- NOTIFICATION -->
+            <div
+                id="settingsMessage"
+                class="notification is-hidden mt-4">
+            </div>
+
+        </form>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>Made with love for your forever ♡</p>
+
+            <small>
+                Wedding Invitation Management System · 2026
+            </small>
+
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/settings.js"></script>
+
+</body>
+</html>

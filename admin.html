@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login | Syauqi & Athiyah</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-wrapper">
+
+        <div class="login-decoration decoration-one">✦</div>
+        <div class="login-decoration decoration-two">❀</div>
+
+        <div class="login-card">
+
+            <div class="login-monogram">S <span>&</span> A</div>
+
+            <p class="login-eyebrow">WEDDING ADMINISTRATION</p>
+
+            <h1>Welcome Back</h1>
+
+            <p class="login-subtitle">Syauqi & Athiyah</p>
+
+            <div class="login-divider">✧</div>
+
+            <form id="loginForm">
+
+                <div class="field">
+                    <label class="label" for="email">Email Address</label>
+                    <div class="control">
+                        <input class="input" type="email"
+                            id="email"
+                            placeholder="Masukkan email admin"
+                            required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="password">Password</label>
+                    <div class="control">
+                        <input class="input" type="password"
+                            id="password"
+                            placeholder="Masukkan password"
+                            required>
+                    </div>
+                </div>
+
+                <button class="button login-button is-fullwidth" type="submit">
+                    Sign In <span>→</span>
+                </button>
+
+                <div id="loginMessage" class="notification is-hidden mt-4"></div>
+
+            </form>
+
+            <p class="login-footer">
+                Made with love for Syauqi & Athiyah ♡
+            </p>
+
+        </div>
+
+        <p class="login-copyright">
+            © 2026 Wedding Invitation Management
+        </p>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Gift Management | Syauqi & Athiyah</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Wedding Gift Management ♡
+            </h1>
+
+            <p class="subtitle">
+                Kelola informasi rekening dan hadiah pernikahan
+                Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <!-- FORM REKENING -->
+        <div class="box management-form-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-gold">
+                    ♧
+                </div>
+
+                <div>
+                    <p class="section-eyebrow">WEDDING GIFT</p>
+
+                    <h2 class="title is-4" id="formTitle">
+                        Tambahkan Rekening
+                    </h2>
+
+                    <p class="form-description">
+                        Tambahkan informasi rekening untuk hadiah pernikahan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="giftForm">
+
+                <input type="hidden" id="giftId">
+
+
+                <!-- BANK -->
+                <div class="field">
+                    <label class="label" for="bankName">
+                        Nama Bank / Metode Pembayaran
+                    </label>
+
+                    <input
+                        class="input"
+                        type="text"
+                        id="bankName"
+                        placeholder="Contoh: BCA"
+                        required>
+                </div>
+
+
+                <!-- NOMOR REKENING -->
+                <div class="field">
+                    <label class="label" for="accountNumber">
+                        Nomor Rekening
+                    </label>
+
+                    <input
+                        class="input"
+                        type="text"
+                        id="accountNumber"
+                        placeholder="Masukkan nomor rekening"
+                        required>
+                </div>
+
+
+                <!-- PEMILIK -->
+                <div class="field">
+                    <label class="label" for="accountHolder">
+                        Nama Pemilik Rekening
+                    </label>
+
+                    <input
+                        class="input"
+                        type="text"
+                        id="accountHolder"
+                        placeholder="Nama pemilik rekening"
+                        required>
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="buttons mt-5">
+
+                    <button
+                        type="submit"
+                        class="button is-primary"
+                        id="saveGiftButton">
+
+                        ♡ Simpan Rekening
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="button is-light"
+                        id="cancelGiftEdit"
+                        style="display:none;">
+
+                        Batal Edit
+
+                    </button>
+
+                </div>
+
+
+                <!-- NOTIFICATION -->
+                <div
+                    id="giftMessage"
+                    class="notification is-hidden mt-4">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- DAFTAR REKENING -->
+        <div class="box management-list-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-rose">
+                    ♡
+                </div>
+
+                <div>
+                    <p class="section-eyebrow">SAVED ACCOUNTS</p>
+
+                    <h2 class="title is-4">
+                        Daftar Rekening
+                    </h2>
+
+                    <p class="form-description">
+                        Kelola seluruh informasi rekening yang tersimpan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="table is-fullwidth gift-table">
+
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Bank / Metode</th>
+                            <th>Nomor Rekening</th>
+                            <th>Nama Pemilik</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="giftList">
+
+                        <tr>
+                            <td colspan="5" class="has-text-centered">
+                                Memuat data rekening...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="gift-table-note">
+                ♡ Pastikan informasi rekening sudah benar sebelum ditampilkan
+                pada undangan.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>A little gift, a lot of love ♡</p>
+
+            <small>
+                Wedding Invitation Management System · 2026
+            </small>
+
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/gift.js"></script>
+
+</body>
+</html>

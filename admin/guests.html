@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guest Management | Syauqi & Athiyah</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Guest Management ♡
+            </h1>
+
+            <p class="subtitle">
+                Kelola daftar tamu undangan Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <!-- FORM TAMBAH TAMU -->
+        <div class="box management-form-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-blue">♙</div>
+
+                <div>
+                    <p class="section-eyebrow">GUEST INFORMATION</p>
+
+                    <h2 class="title is-4" id="formTitle">
+                        Tambahkan Tamu
+                    </h2>
+
+                    <p class="form-description">
+                        Tambahkan nama tamu dan tentukan kategori undangan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="guestForm">
+
+                <input type="hidden" id="guestId">
+
+                <!-- NAMA TAMU -->
+                <div class="field">
+                    <label class="label" for="guestName">
+                        Nama Tamu
+                    </label>
+
+                    <input
+                        type="text"
+                        id="guestName"
+                        class="input"
+                        placeholder="Masukkan nama tamu"
+                        required>
+                </div>
+
+
+                <!-- KATEGORI -->
+                <div class="field">
+                    <label class="label" for="guestCategory">
+                        Kategori Tamu
+                    </label>
+
+                    <div class="select is-fullwidth">
+                        <select id="guestCategory">
+                            <option value="Keluarga">Keluarga</option>
+                            <option value="Teman">Teman</option>
+                            <option value="Kerabat">Kerabat</option>
+                            <option value="Rekan Kerja">Rekan Kerja</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="buttons mt-5">
+
+                    <button
+                        type="submit"
+                        class="button is-primary"
+                        id="saveGuestButton">
+
+                        ♡ Simpan Tamu
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="button is-light is-hidden"
+                        id="cancelGuestEdit">
+
+                        Batal Edit
+
+                    </button>
+
+                </div>
+
+
+                <!-- NOTIFICATION -->
+                <div id="guestMessage"
+                    class="notification is-hidden mt-4">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- DAFTAR TAMU -->
+        <div class="box management-list-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-gold">✉</div>
+
+                <div>
+                    <p class="section-eyebrow">INVITATION DIRECTORY</p>
+
+                    <h2 class="title is-4">
+                        Daftar Tamu Undangan
+                    </h2>
+
+                    <p class="form-description">
+                        Kelola daftar penerima undangan dan link personal mereka.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="field guest-search">
+                <div class="control">
+                    <input
+                        type="search"
+                        id="guestSearch"
+                        class="input"
+                        placeholder="Cari nama tamu...">
+                </div>
+            </div>
+
+
+            <!-- TABLE -->
+            <div class="table-container">
+
+                <table class="table is-fullwidth guest-table">
+
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Nama Tamu</th>
+                            <th>Kategori</th>
+                            <th>Link Undangan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="guestList">
+                        <tr>
+                            <td colspan="5">
+                                Memuat data tamu...
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="guest-table-note">
+                ♡ Setiap tamu memiliki link undangan personal yang berbeda.
+            </p>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>Every guest is part of our beautiful story ♡</p>
+            <small>Wedding Invitation Management System · 2026</small>
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/guests.js"></script>
+
+</body>
+</html>

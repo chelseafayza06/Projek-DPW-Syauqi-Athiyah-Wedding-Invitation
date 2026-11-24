@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Content Management | Syauqi & Athiyah</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Website Content Management ♡
+            </h1>
+
+            <p class="subtitle">
+                Kelola teks dan informasi yang ditampilkan
+                pada undangan Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <!-- CONTENT FORM -->
+        <div class="box management-form-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-rose">
+                    ✎
+                </div>
+
+                <div>
+                    <p class="section-eyebrow">WEBSITE INFORMATION</p>
+
+                    <h2 class="title is-4">
+                        Edit Konten Undangan
+                    </h2>
+
+                    <p class="form-description">
+                        Sesuaikan setiap tulisan agar undangan terasa
+                        lebih personal dan bermakna.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="contentForm">
+
+                <!-- JUDUL -->
+                <div class="field">
+                    <label class="label" for="invitationTitle">
+                        Judul Undangan
+                    </label>
+
+                    <input
+                        class="input"
+                        id="invitationTitle"
+                        type="text"
+                        placeholder="Contoh: The Wedding of Syauqi & Athiyah">
+                </div>
+
+
+                <!-- TAGLINE -->
+                <div class="field">
+                    <label class="label" for="tagline">
+                        Tagline
+                    </label>
+
+                    <input
+                        class="input"
+                        id="tagline"
+                        type="text"
+                        placeholder="Contoh: Collecting Places, Tasting Moments, Creating Forever.">
+                </div>
+
+
+                <!-- OPENING -->
+                <div class="field">
+                    <label class="label" for="openingText">
+                        Teks Pembuka
+                    </label>
+
+                    <textarea
+                        class="textarea"
+                        id="openingText"
+                        rows="5"
+                        placeholder="Tuliskan kalimat pembuka undangan..."></textarea>
+
+                    <p class="help">
+                        Teks yang akan menyambut tamu ketika membuka undangan.
+                    </p>
+                </div>
+
+
+                <!-- CLOSING -->
+                <div class="field">
+                    <label class="label" for="closingText">
+                        Teks Penutup
+                    </label>
+
+                    <textarea
+                        class="textarea"
+                        id="closingText"
+                        rows="5"
+                        placeholder="Tuliskan kalimat penutup undangan..."></textarea>
+                </div>
+
+
+                <!-- THANK YOU -->
+                <div class="field">
+                    <label class="label" for="thankYouText">
+                        Ucapan Terima Kasih
+                    </label>
+
+                    <textarea
+                        class="textarea"
+                        id="thankYouText"
+                        rows="5"
+                        placeholder="Tuliskan ucapan terima kasih kepada tamu..."></textarea>
+                </div>
+
+
+                <!-- SAVE -->
+                <div class="buttons mt-5">
+
+                    <button
+                        type="submit"
+                        class="button is-primary">
+
+                        ♡ Simpan Perubahan
+
+                    </button>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="contentMessage"
+                    class="notification is-hidden mt-4">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>Every detail tells a beautiful story ♡</p>
+
+            <small>
+                Wedding Invitation Management System · 2026
+            </small>
+
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/content.js"></script>
+
+</body>
+</html>

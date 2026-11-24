@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events Management | Syauqi & Athiyah</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ADMIN CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- PAGE HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Events Management ♡
+            </h1>
+
+            <p class="subtitle">
+                Kelola jadwal akad dan resepsi Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <!-- FORM ACARA -->
+        <div class="box management-form-box">
+
+            <div class="management-form-heading">
+                <div class="management-icon icon-gold">♧</div>
+
+                <div>
+                    <p class="section-eyebrow">EVENT DETAILS</p>
+
+                    <h2 class="title is-4" id="formTitle">
+                        Tambahkan Acara
+                    </h2>
+
+                    <p class="form-description">
+                        Lengkapi informasi acara pernikahan.
+                    </p>
+                </div>
+            </div>
+
+
+            <form id="eventForm">
+
+                <input type="hidden" id="eventId">
+
+                <!-- NAMA ACARA -->
+                <div class="field">
+                    <label class="label" for="eventName">
+                        Nama Acara
+                    </label>
+
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            id="eventName"
+                            placeholder="Contoh: Akad Nikah"
+                            required>
+                    </div>
+                </div>
+
+
+                <!-- TANGGAL DAN WAKTU -->
+                <div class="columns">
+
+                    <div class="column">
+                        <div class="field">
+                            <label class="label" for="eventDate">
+                                Tanggal Acara
+                            </label>
+
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="date"
+                                    id="eventDate">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="field">
+                            <label class="label" for="eventTime">
+                                Waktu Acara
+                            </label>
+
+                            <div class="control">
+                                <input
+                                    class="input"
+                                    type="time"
+                                    id="eventTime">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- LOKASI -->
+                <div class="field">
+                    <label class="label" for="eventLocation">
+                        Nama Lokasi
+                    </label>
+
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="text"
+                            id="eventLocation"
+                            placeholder="Contoh: Masjid Al-Hidayah">
+                    </div>
+                </div>
+
+
+                <!-- ALAMAT -->
+                <div class="field">
+                    <label class="label" for="eventAddress">
+                        Alamat Lengkap
+                    </label>
+
+                    <div class="control">
+                        <textarea
+                            class="textarea"
+                            id="eventAddress"
+                            placeholder="Masukkan alamat lengkap acara">
+                        </textarea>
+                    </div>
+                </div>
+
+
+                <!-- GOOGLE MAPS -->
+                <div class="field">
+                    <label class="label" for="eventMaps">
+                        Link Google Maps
+                    </label>
+
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="url"
+                            id="eventMaps"
+                            placeholder="https://maps.google.com/...">
+                    </div>
+
+                    <p class="help">
+                        Masukkan link Google Maps lokasi acara.
+                    </p>
+                </div>
+
+
+                <!-- BUTTONS -->
+                <div class="buttons mt-5">
+
+                    <button
+                        type="submit"
+                        class="button is-primary"
+                        id="saveEventButton">
+
+                        ♡ Simpan Acara
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelEdit"
+                        class="button is-light is-hidden">
+
+                        Batal Edit
+
+                    </button>
+
+                </div>
+
+
+                <!-- NOTIFICATION -->
+                <div id="eventMessage"
+                    class="notification is-hidden mt-4">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- DAFTAR ACARA -->
+        <div class="box management-list-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-rose">♡</div>
+
+                <div>
+                    <p class="section-eyebrow">SAVED EVENTS</p>
+
+                    <h2 class="title is-4">
+                        Daftar Acara
+                    </h2>
+
+                    <p class="form-description">
+                        Informasi jadwal acara yang telah disimpan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div id="eventList">
+                <p>Memuat data acara...</p>
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>Designed with love for Syauqi & Athiyah ♡</p>
+            <small>Wedding Invitation Management System · 2026</small>
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/events.js"></script>
+
+</body>
+</html>

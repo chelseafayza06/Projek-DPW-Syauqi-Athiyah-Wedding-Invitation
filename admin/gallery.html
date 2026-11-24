@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery Management | Syauqi & Athiyah</title>
+
+    <!-- BULMA -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="management-header">
+
+            <a href="dashboard.html" class="button is-light mb-5">
+                ← Kembali ke Dashboard
+            </a>
+
+            <p class="section-eyebrow">WEDDING MANAGEMENT</p>
+
+            <h1 class="title is-2">
+                Gallery Management ♡
+            </h1>
+
+            <p class="subtitle">
+                Kelola foto kenangan dan momen indah Syauqi & Athiyah.
+            </p>
+
+        </div>
+
+
+        <!-- FORM UPLOAD -->
+        <div class="box management-form-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-rose">▧</div>
+
+                <div>
+                    <p class="section-eyebrow">PHOTO COLLECTION</p>
+
+                    <h2 class="title is-4" id="formTitle">
+                        Tambahkan Foto
+                    </h2>
+
+                    <p class="form-description">
+                        Upload dan atur foto untuk galeri undangan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <form id="galleryForm">
+
+                <input type="hidden" id="galleryId">
+                <input type="hidden" id="oldImageUrl">
+
+
+                <!-- PILIH FOTO -->
+                <div class="field">
+                    <label class="label" for="galleryImage">
+                        Pilih Foto
+                    </label>
+
+                    <div class="control">
+                        <input
+                            class="input"
+                            type="file"
+                            id="galleryImage"
+                            accept="image/jpeg,image/png,image/webp">
+                    </div>
+
+                    <p class="help">
+                        Format JPG, PNG, atau WebP. Maksimal ukuran 5 MB.
+                    </p>
+                </div>
+
+
+                <!-- PREVIEW -->
+                <div class="field">
+                    <label class="label">Preview Foto</label>
+
+                    <div class="gallery-preview-container">
+
+                        <img
+                            id="imagePreview"
+                            src=""
+                            alt="Preview foto galeri"
+                            style="display:none;">
+
+                        <div id="galleryPreviewPlaceholder"
+                            class="gallery-preview-placeholder">
+                            <span>♡</span>
+                            <p>Preview foto akan muncul di sini</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- CAPTION -->
+                <div class="field">
+                    <label class="label" for="galleryCaption">
+                        Caption Foto
+                    </label>
+
+                    <input
+                        class="input"
+                        type="text"
+                        id="galleryCaption"
+                        placeholder="Contoh: Our beautiful memories">
+                </div>
+
+
+                <!-- URUTAN -->
+                <div class="field">
+                    <label class="label" for="displayOrder">
+                        Urutan Foto
+                    </label>
+
+                    <input
+                        class="input"
+                        type="number"
+                        id="displayOrder"
+                        value="1"
+                        min="1">
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="buttons mt-5">
+
+                    <button
+                        type="submit"
+                        class="button is-primary"
+                        id="saveGalleryButton">
+
+                        ♡ Simpan Foto
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="cancelGalleryEdit"
+                        class="button is-light is-hidden">
+
+                        Batal Edit
+
+                    </button>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div
+                    id="galleryMessage"
+                    class="notification is-hidden mt-4">
+                </div>
+
+            </form>
+
+        </div>
+
+
+        <!-- DAFTAR GALERI -->
+        <div class="box management-list-box">
+
+            <div class="management-form-heading">
+
+                <div class="management-icon icon-gold">♡</div>
+
+                <div>
+                    <p class="section-eyebrow">SAVED MEMORIES</p>
+
+                    <h2 class="title is-4">
+                        Daftar Foto Galeri
+                    </h2>
+
+                    <p class="form-description">
+                        Semua foto yang telah diunggah ke galeri.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div
+                id="galleryList"
+                class="columns is-multiline">
+
+                <p>Memuat foto...</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            <p>Designed with love for Syauqi & Athiyah ♡</p>
+            <small>Wedding Invitation Management System · 2026</small>
+        </footer>
+
+    </div>
+</section>
+
+
+<!-- SUPABASE -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/gallery.js"></script>
+
+</body>
+</html>

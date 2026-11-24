@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wedding Dashboard | Syauqi & Athiyah</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="dashboard-page">
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-brand">
+                <div class="sidebar-monogram">S <span>&</span> A</div>
+                <p>WEDDING ADMIN</p>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <p class="sidebar-label">MAIN MENU</p>
+
+            <nav class="sidebar-navigation">
+
+                <a href="dashboard.html" class="sidebar-link active">
+                    <span class="sidebar-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+            </nav>
+
+            <p class="sidebar-label">MANAGEMENT</p>
+
+            <nav class="sidebar-navigation">
+
+                <a href="couple.html" class="sidebar-link">
+                    <span class="sidebar-icon">♡</span>
+                    <span>Couple</span>
+                </a>
+
+                <a href="events.html" class="sidebar-link">
+                    <span class="sidebar-icon">♧</span>
+                    <span>Events</span>
+                </a>
+
+                <a href="gallery.html" class="sidebar-link">
+                    <span class="sidebar-icon">▧</span>
+                    <span>Gallery</span>
+                </a>
+
+                <a href="love-story.html" class="sidebar-link">
+                    <span class="sidebar-icon">♥</span>
+                    <span>Love Story</span>
+                </a>
+
+                <a href="guests.html" class="sidebar-link">
+                    <span class="sidebar-icon">♙</span>
+                    <span>Guest Management</span>
+                </a>
+
+                <a href="rsvp.html" class="sidebar-link">
+                    <span class="sidebar-icon">✉</span>
+                    <span>RSVP & Wishes</span>
+                </a>
+
+                <a href="gift.html" class="sidebar-link">
+                    <span class="sidebar-icon">♧</span>
+                    <span>Wedding Gift</span>
+                </a>
+
+            </nav>
+
+            <p class="sidebar-label">WEBSITE</p>
+
+            <nav class="sidebar-navigation">
+
+                <a href="content.html" class="sidebar-link">
+                    <span class="sidebar-icon">▤</span>
+                    <span>Website Content</span>
+                </a>
+
+                <a href="settings.html" class="sidebar-link">
+                    <span class="sidebar-icon">⚙</span>
+                    <span>Invitation Settings</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-bottom-text">
+                    <span>♡</span>
+                    <p>Made with love</p>
+                    <small>Syauqi & Athiyah · 2026</small>
+                </div>
+
+                <button id="logoutButton" class="sidebar-logout">
+                    ↪ &nbsp; Logout
+                </button>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main">
+
+            <!-- TOPBAR -->
+            <header class="dashboard-topbar">
+
+                <div>
+                    <p class="topbar-date">WEDDING MANAGEMENT SYSTEM</p>
+                    <h2>Dashboard Overview</h2>
+                </div>
+
+                <div class="topbar-profile">
+                    <div class="profile-avatar">A</div>
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Wedding Manager</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- WELCOME -->
+            <section class="dashboard-welcome">
+
+                <div class="welcome-content">
+                    <p class="welcome-eyebrow">WELCOME TO YOUR DASHBOARD</p>
+
+                    <h1>Welcome Back, Admin!</h1>
+
+                    <p>
+                        Manage every little detail of Syauqi & Athiyah's
+                        special day in one place.
+                    </p>
+
+                    <a href="../index.html" target="_blank"
+                        class="welcome-button">
+                        View Wedding Website &nbsp; →
+                    </a>
+                </div>
+
+                <div class="welcome-decoration">
+                    <span class="welcome-heart">♡</span>
+                    <span class="welcome-initial">S & A</span>
+                    <span class="welcome-caption">Our Little Forever</span>
+                </div>
+
+            </section>
+
+
+            <!-- SECTION HEADING -->
+            <section class="dashboard-section">
+
+                <div class="section-heading">
+                    <div>
+                        <p class="section-eyebrow">MANAGE YOUR WEBSITE</p>
+                        <h2>Website Management</h2>
+                        <p class="section-description">
+                            Everything you need to manage your wedding invitation.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- MANAGEMENT CARDS -->
+                <div class="management-grid">
+
+                    <a href="couple.html" class="management-card">
+                        <div class="management-icon icon-rose">♡</div>
+                        <div class="management-info">
+                            <h3>Couple Information</h3>
+                            <p>Manage the bride and groom's information.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="events.html" class="management-card">
+                        <div class="management-icon icon-gold">♧</div>
+                        <div class="management-info">
+                            <h3>Wedding Events</h3>
+                            <p>Manage ceremony and reception schedules.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="gallery.html" class="management-card">
+                        <div class="management-icon icon-sage">▧</div>
+                        <div class="management-info">
+                            <h3>Photo Gallery</h3>
+                            <p>Upload and organize wedding photographs.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="love-story.html" class="management-card">
+                        <div class="management-icon icon-rose">♥</div>
+                        <div class="management-info">
+                            <h3>Love Story</h3>
+                            <p>Share the journey of the couple's love story.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="guests.html" class="management-card">
+                        <div class="management-icon icon-blue">♙</div>
+                        <div class="management-info">
+                            <h3>Guest Management</h3>
+                            <p>Manage guest lists and personalized invitations.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="rsvp.html" class="management-card">
+                        <div class="management-icon icon-gold">✉</div>
+                        <div class="management-info">
+                            <h3>RSVP & Wishes</h3>
+                            <p>Manage attendance confirmations and wishes.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="gift.html" class="management-card">
+                        <div class="management-icon icon-rose">♧</div>
+                        <div class="management-info">
+                            <h3>Wedding Gift</h3>
+                            <p>Manage bank account and wedding gift details.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="content.html" class="management-card">
+                        <div class="management-icon icon-sage">▤</div>
+                        <div class="management-info">
+                            <h3>Website Content</h3>
+                            <p>Manage texts and information on the invitation.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+
+                    <a href="settings.html" class="management-card">
+                        <div class="management-icon icon-blue">⚙</div>
+                        <div class="management-info">
+                            <h3>Invitation Settings</h3>
+                            <p>Customize music and invitation display settings.</p>
+                        </div>
+                        <span class="card-arrow">↗</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>Designed with love for Syauqi & Athiyah ♡</p>
+                <small>Wedding Invitation Management System · 2026</small>
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Couple Management</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+<section class="section">
+    <div class="container">
+
+        <a href="dashboard.html" class="button mb-5">
+            ← Kembali ke Dashboard
+        </a>
+
+        <h1 class="title">Couple Management ♡</h1>
+
+        <p class="subtitle">
+            Kelola informasi Syauqi & Athiyah
+        </p>
+
+        <form id="coupleForm">
+
+            <div class="columns">
+
+                <!-- SYAUQI -->
+                <div class="column">
+                    <div class="box">
+
+                        <h2 class="title is-4">Mempelai Pria</h2>
+
+                        <div class="field">
+                            <label class="label">Nama Lengkap</label>
+                            <input
+                                class="input"
+                                type="text"
+                                id="groomName"
+                                placeholder="Nama Syauqi"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Deskripsi</label>
+                            <textarea
+                                class="textarea"
+                                id="groomDescription"
+                                placeholder="Deskripsi mempelai pria">
+                            </textarea>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Foto</label>
+                            <input
+                                class="input"
+                                type="text"
+                                id="groomPhoto"
+                                placeholder="assets/images/syauqi.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ATHIYAH -->
+                <div class="column">
+                    <div class="box">
+
+                        <h2 class="title is-4">Mempelai Wanita</h2>
+
+                        <div class="field">
+                            <label class="label">Nama Lengkap</label>
+                            <input
+                                class="input"
+                                type="text"
+                                id="brideName"
+                                placeholder="Nama Athiyah"
+                                required>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Deskripsi</label>
+                            <textarea
+                                class="textarea"
+                                id="brideDescription"
+                                placeholder="Deskripsi mempelai wanita">
+                            </textarea>
+                        </div>
+
+                        <div class="field">
+                            <label class="label">Foto</label>
+                            <input
+                                class="input"
+                                type="text"
+                                id="bridePhoto"
+                                placeholder="assets/images/athiyah.jpg">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" class="button is-dark is-fullwidth">
+                Simpan Perubahan
+            </button>
+
+            <div id="coupleMessage"
+                class="notification is-hidden mt-4">
+            </div>
+
+        </form>
+
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/admin.js"></script>
+<script src="../js/couple.js"></script>
+
+</body>
+</html>
